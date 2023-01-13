@@ -258,8 +258,8 @@ git push origin master #将B仓库的最终的本地库推到云端master
 ## 挂代理
 
 ```
-git config --global http.proxy http://127.0.0.1:7890
-git config --global https.proxy https://127.0.0.1:7890
+git config --global http.proxy http://169.254.224.64:7890
+git config --global https.proxy https://169.254.224.64:7890
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 npm config delete proxy
