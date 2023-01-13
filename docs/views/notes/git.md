@@ -59,7 +59,7 @@ git rm <file>                                               //删除文件，若
 
 4、创建SSH Key，建立本地Git仓库和GitHub仓库之间的传输的秘钥
 
-ssh-keygen -t rsa -C 'your email'                                                    //创建SSH Key
+ssh-keygen -t rsa -C '1250377062@qq.com'                                                    //创建SSH Key
 git remote add origin git@github.com:username/repostery.git                  //关联本地仓库，远程库的名字为origin
 
 //第一次把当前分支main推送到远程，-u参数不但推送，而且将本地的分支和远程的分支关联起来
