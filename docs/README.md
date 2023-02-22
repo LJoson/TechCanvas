@@ -36,8 +36,9 @@ footer: MIT Licensed | Copyright © 2020-present Lj
 
 <CanvasNest color='0,23,255' zIndex='-2'></CanvasNest>
 
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=w80iB4VMWGpCdzsLwYIWpOrFn2h5MkhwRMsIYA6u2Jc"></script>
 <script>
-  
+
 </script>
 
 <style lang="stylus">
@@ -113,7 +114,7 @@ footer: MIT Licensed | Copyright © 2020-present Lj
     transform: scale(0.68,0.58);
     background: none;
   }
-  .home img {    
+  .home img {
     margin: 24% auto -6% auto !important;
   }
   .home .feature {
