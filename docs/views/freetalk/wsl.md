@@ -313,7 +313,7 @@ chmod  440 /etc/sudoers.d/*
 ### [WSL2的网络代理配置](https://jiayaoo3o.github.io/2020/06/23/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1WSL2%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/)
 
 目的是使用win下的代理实现科学上网。
-
+#### 方法一
 1.WSL2获取Win10的ip
 在Win10 -> WSL2这个方向, 是可以直接通过Localhost来访问的, 但是WSL2 -> Win10这个方向就不能直接访问Localhost了, 需要指定Win10的ip, 想要查看WSL2中Win10的ip, 只需要查看resolve.conf文件 :
 ```
@@ -359,7 +359,32 @@ if [ "`git config --global --get proxy.https`" != "socks5://$windows_host:7890" 
             git config --global proxy.https socks5://$windows_host:7890
 fi
 ```
-3.设置代理允许局域网链接，且代理可以通过win防火墙
+#### 方法二
+
+WSL2配置代理的时候设置所有代理为clash 虚拟机映射IP加上clash里面的端口,默认是7890。首先在WSL每次启动的时候，获取当前的ip，并设置代理
+
+可编辑/etc/profile
+```
+sudo vim /etc/profile
+```
+
+转到文件最末尾，添加以下两行
+```
+host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ") export ALL_PROXY="http://$host_ip:7890"
+```
+
+$host_ip即为配置代理的时候需要设置的ip地址,注意第二行，最后的7890，这是clash默认代理的端口号,最后
+```
+source /etc/profile
+```
+
+检查代理是否生效
+```
+curl google.com
+```
+
+
+两个办法最后都要在win系统设置代理允许局域网链接，且代理可以通过win防火墙
 
 ### shell脚本执行错误 $'\r':command not found
 
