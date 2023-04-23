@@ -9,8 +9,8 @@ module.exports = {
                 'AI/detection.md', 'AI/aione.md',
                 'AI/2020baidustar.md', 'AI/TextClassification.md', 'AI/taac2021.md',
                 'AI/tengine/ohosndk0.md',
-                'AI/mmlab/mmpose/00.md','AI/mmlab/mmpose/learn.md',
-                'AI/ros/env.md',
+                'AI/mmlab/mmpose/00.md',
+                'AI/ros/env.md','AI/ros/note00.md',
 
 
             ]

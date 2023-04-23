@@ -300,3 +300,20 @@ git lfs install
 ```
 
 https://zhuanlan.zhihu.com/p/146683392
+
+## git pull 强制覆盖本地的代码方式，下面是正确的方法：
+```
+git fetch --all
+```
+然后，有两个选择：
+```
+git reset --hard origin/master
+```
+或者在其他分支上：
+
+```
+git reset --hard origin/<branch_name>
+```
+## git clone 显示详细log和进度
+
+加上--progress和--verbose参数
