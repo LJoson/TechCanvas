@@ -73,3 +73,37 @@ https://gist.github.com/diegopacheco/cd795d36e6ebcd2537cd18174865887b
 
 - netstat -apn
 确定在Linux上进行UDP流量的进程
+
+
+- 命令行连接wifi
+在Linux命令行中连接WiFi的步骤如下：
+
+打开终端，输入以下命令查看当前的网络接口：
+
+ifconfig
+找到您的无线网卡接口名称，通常是“wlan0”或“wlp2s0”。
+
+扫描可用的WiFi网络。输入以下命令：
+```
+sudo iwlist wlan0 scan
+```
+（请将“wlan0”替换为您的无线网卡接口名称）
+
+这个命令会列出您当前范围内的所有WiFi网络，包括它们的名称（ESSID）、频率、信号强度、加密方式等信息。
+
+选择您要连接的WiFi网络，然后输入以下命令连接：
+```
+sudo iwconfig wlan0 essid "network_name" key "password"
+```
+（请将“wlan0”替换为您的无线网卡接口名称，将“network_name”替换为您要连接的WiFi网络名称，将“password”替换为该网络的密码。如果该网络没有密码，则省略“key”选项。）
+
+最后，检查您是否成功连接到WiFi网络。输入以下命令：
+```
+ifconfig wlan0
+```
+（请将“wlan0”替换为您的无线网卡接口名称）
+
+如果您成功连接到WiFi网络，则您应该能够看到类似于以下内容的输出：
+```
+inet addr:192.168.0.101  Bcast:192.168.0.255  Mask:255.255.255.0
+```

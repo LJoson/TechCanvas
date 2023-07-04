@@ -35,7 +35,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D OPENCV_EXTRA_MODULES_PATH=/root/workspace/opencv_contrib/modules \
 -D BUILD_EXAMPLES=ON ..
 ```
-
+https://developer.ridgerun.com/wiki/index.php?title=Compiling_OpenCV_from_Source
 https://zhuanlan.zhihu.com/p/152287543
 
 https://blog.csdn.net/qq_43872529/article/details/100937091

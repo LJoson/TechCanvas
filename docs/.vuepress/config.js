@@ -5,7 +5,7 @@ const plugins = require('./config/plugins/')
 
 module.exports = {
   base: '/',
-  title: "GLIMMER小作坊",
+  title: "GLIMMER小作坊的工具人",
   description: '时间太瘦，指尖太宽，且行且珍惜',
   head: [
     ['link', {
