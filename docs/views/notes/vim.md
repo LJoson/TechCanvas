@@ -13,7 +13,8 @@ isShowComments: true
 [[toc]]
 # vim 笔录
 
-vi命令是UNIX操作系统和类UNIX操作系统中最通用的全屏幕纯文本编辑器。Linux中的vi编辑器叫vim，它是vi的增强版（vi Improved），与vi编辑器完全兼容，而且实现了很多增强功能。
+vi命令是UNIX操作系统和类UNIX操作系统中最通用的全屏幕纯文本编辑器。
+Linux中的vi编辑器叫vim，它是vi的增强版（vi Improved），与vi编辑器完全兼容，而且实现了很多增强功能。
 
 
 
@@ -99,7 +100,7 @@ O：在当前行前面插入一空行；
 
 gg：是让光标移到首行，在vim才有效，vi中无效
 
-v ： 是进入Visual(可视）模式
+v ： 是进入Visuala(可视)模式
 
 G ：光标移到最后一行
 

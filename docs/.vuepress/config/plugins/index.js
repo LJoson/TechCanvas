@@ -81,7 +81,7 @@ module.exports = [
     require('../../plugins/detailsOpenFlag/index'),
     //require('../../plugins/musicPlayer/index'),
     //require('../../plugins/notification/index'),
-    //require('../../plugins/live2d/index'),
+    require('../../plugins/live2d/index'),
     [require('../../plugins/enhanced-search'), { // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
         thirdparty: [ // 可选，默认 []
             {
@@ -207,7 +207,7 @@ function getCardImgListDOM(dataList, row) {
             ${item.desc ? `<p class="desc">${item.desc}</p>` : ''}
           </a>
         </div>
-        
+
         ${item.avatar || item.author
                 ? `<div class="box-footer">
               <a href="${item.link}" target="_blank">

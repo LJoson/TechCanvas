@@ -87,7 +87,7 @@ sudo apt-get install qemu
 - 1.在windows上安装[VcXsrv](https://sourceforge.net/projects/vcxsrv/)
 原理是WSL会把界面信息发送给VcXsrv，由VcXsrv来绘制界面
 Windows上打开XLaunch,一般选择Multiple Window，然后一直下一步，也可以根据提示保存默认配置，之后不用重复配置。
-XLaunch会一直在后台运行，要启动WSL图形界面，是需要确定XLaunch启动了。
+XLaunch会一直在后台运行，要启动WSL图形界面,需要确定XLaunch启动了。
 
 - 2.在WSL上安装xfce desktop，选择xfce4桌面，它的优点是轻量、美观、占用系统资源少
 ```

@@ -107,3 +107,9 @@ ifconfig wlan0
 ```
 inet addr:192.168.0.101  Bcast:192.168.0.255  Mask:255.255.255.0
 ```
+
+#切换自带驱动usb无线网卡工作模式
+无线网卡通常自带Windows驱动，存于其模拟CD-ROM中。Linux系统下，网卡首先被识别为大容量U盘（$ dmesg查看），要用usb_modeswitch 命令改变其工作模式，用法如下：
+```
+sudo usb_modeswitch -KW -v 0bda -p 1a2b
+```

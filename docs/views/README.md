@@ -30,13 +30,13 @@ isShowComments: true
 
 <div id='fj'>
 
-[【电子设计等】](/views/ee/star.html) | [【AI及机器人等】](/views/AI/2020baidustar.html)| [【计算机技术等】](/views/cs/OS/GlimmerOS.html) 
+[【硬件及运动控制等】](/views/ee/star.html) | [【AI及机器人等】](/views/AI/2020baidustar.html)| [【计算机技术等】](/views/cs/OS/GlimmerOS.html)
 
 </div>
 
 <div id='se'>
 
- [【游戏设计等】](/views/game/16.html) | [【笔记等】](/views/notes/git.html)|[【杂谈】](/views/freetalk/wsl.html)|[【算法等】](/views/algorithm/otsu.html)
+ [【游戏设计等】](/views/game/16.html) | [【笔记等】](/views/notes/git.html)|[【杂谈】](/views/freetalk/wsl2/wsl.html)|[【算法等】](/views/algorithm/opencv/otsu.html)
 
 </div>
 
@@ -44,7 +44,7 @@ isShowComments: true
 
 
 
-<style lang='stylus' scoped> 
+<style lang='stylus' scoped>
 	@keyframes rowup {
         0% {
             -webkit-transform: translate3d(0, 15%, 0);
@@ -81,7 +81,7 @@ isShowComments: true
 		opacity: 1;
 		transition: opacity 5s linear;
 		pointer-events: none;
-	} 
+	}
 	.content__default:not(.custom) img {
 	    max-width: 20% !important;
 	    margin-top: -10px;
@@ -107,7 +107,7 @@ isShowComments: true
 		-webkit-transform:rotate(360deg); /* Safari and Chrome */
 		-o-transform:rotate(360deg	); /* Opera */
 	}
-	
+
 	#tag {
 		width:100px;
 		height:100px;
@@ -127,7 +127,7 @@ isShowComments: true
 		-webkit-transform:rotate(360deg); /* Safari and Chrome */
 		-o-transform:rotate(360deg	); /* Opera */
 	}
-	
+
 	#category p,#tag p {
 	    margin: 0;
 	    line-height: 100px;
@@ -137,11 +137,11 @@ isShowComments: true
 	#category,#tag {
         margin-top: 18px;
     }
-	
+
 	#fj,#se {
 		margin-top: 27px;
 	}
-	
+
 	@media screen and (max-width: 960px){
 	    .catalog-graph {
 	        display: none;
@@ -176,7 +176,7 @@ isShowComments: true
 	        font-size: 14px;
 	    }
 	}
-	
+
 	@media screen and (max-width: 320px){
 		#fj,#se {
 			font-size: 10px !important;

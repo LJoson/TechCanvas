@@ -4,7 +4,7 @@ date: 2022-04-17 20:11:12
 sidebar: true
 sidebarDepth: 5
 tags:
-- 自动化集成测试
+- CI/CD
 categories:
 - "杂谈"
 isShowComments: true

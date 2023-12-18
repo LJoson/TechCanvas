@@ -11,7 +11,7 @@ isShowComments: true
 ---
 
 
-- 《git教程》https://www.liaoxuefeng.com/wiki/896043488029600 remote set-url origin git@github.com:“仓库地址”
+- 《git教程》 remote set-url origin git@github.com:“仓库地址”
 
 git config --global user.name “git用户名”
 
@@ -110,7 +110,85 @@ git log -p main..origin/main // 查看本地main和远端origin/main的版本差
 git merge origin/main // 合并远端origin/main分支到当前本地分支
 
 7.Git submodule 子模块的管理和使用
-https://www.jianshu.com/p/9000cd49822c
+
+添加子模块
+此文中统一将远程项目https://github.com/maonx/vimwiki-assets.git克隆到本地assets文件夹。
+
+$ git submodule add https://github.com/maonx/vimwiki-assets.git assets
+添加子模块后运行git status, 可以看到目录有增加1个文件.gitmodules, 这个文件用来保存子模块的信息。
+
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+    new file:   .gitmodules
+    new file:   assets
+查看子模块
+$ git submodule
+ e33f854d3f51f5ebd771a68da05ad0371a3c0570 assets (heads/master)
+更新子模块
+更新项目内子模块到最新版本
+$ git submodule update
+更新子模块为远程项目的最新版本
+$ git submodule update --remote
+克隆包含子模块的项目
+克隆包含子模块的项目有二种方法：一种是先克隆父项目，再更新子模块；另一种是直接递归克隆整个项目。
+
+克隆父项目，再更新子模块
+克隆父项目
+$ git clone https://github.com/maonx/vimwiki-assets.git assets
+查看子模块
+$ git submodule
+ -e33f854d3f51f5ebd771a68da05ad0371a3c0570 assets
+子模块前面有一个-，说明子模块文件还未检入（空文件夹）。
+
+初始化子模块
+$ git submodule init
+Submodule 'assets' (https://github.com/maonx/vimwiki-assets.git) registered for path 'assets'
+初始化模块只需在克隆父项目后运行一次。
+
+更新子模块
+$ git submodule update
+Cloning into 'assets'...
+remote: Counting objects: 151, done.
+remote: Compressing objects: 100% (80/80), done.
+remote: Total 151 (delta 18), reused 0 (delta 0), pack-reused 70
+Receiving objects: 100% (151/151), 1.34 MiB | 569.00 KiB/s, done.
+Resolving deltas: 100% (36/36), done.
+Checking connectivity... done.
+Submodule path 'assets': checked out 'e33f854d3f51f5ebd771a68da05ad0371a3c0570'
+递归克隆整个项目
+git clone https://github.com/maonx/vimwiki-assets.git assets --recursive
+递归克隆整个项目，子模块已经同时更新了，一步到位。
+
+修改子模块
+在子模块中修改文件后，直接提交到远程项目分支。
+
+$ git add .
+$ git ci -m "commit"
+$ git push origin HEAD:master
+删除子模块
+删除子模块比较麻烦，需要手动删除相关的文件，否则在添加子模块时有可能出现错误
+同样以删除assets文件夹为例
+
+删除子模块文件夹
+$ git rm --cached assets
+$ rm -rf assets
+删除.gitmodules文件中相关子模块信息
+[submodule "assets"]
+  path = assets
+  url = https://github.com/maonx/vimwiki-assets.git
+删除.git/config中的相关子模块信息
+[submodule "assets"]
+  url = https://github.com/maonx/vimwiki-assets.git
+删除.git文件夹中的相关子模块文件
+
+$ rm -rf .git/modules/assets
+
 
 - 如果首次克隆仓库及其模块，使用：
 ```
@@ -258,8 +336,8 @@ git push origin master #将B仓库的最终的本地库推到云端master
 ## 挂代理
 
 ```
-git config --global http.proxy http://169.254.224.64:7890
-git config --global https.proxy https://169.254.224.64:7890
+git config --global http.proxy http://172.24.48.1:7890
+git config --global https.proxy https://172.24.48.1:7890
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 npm config delete proxy
@@ -317,3 +395,6 @@ git reset --hard origin/<branch_name>
 ## git clone 显示详细log和进度
 
 加上--progress和--verbose参数
+
+## .gitignore文件的配置使用
+[.gitignore文件的配置使用](https://zhuanlan.zhihu.com/p/52885189)
