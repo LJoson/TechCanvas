@@ -65,3 +65,8 @@ source devel/setup.bash
 python支持中文注释
 
 在源文件的初始部分，而且必须放在第一行，添加#coding=utf-8 或者 #coding=gbk 或# -- coding: gb2312 --
+
+- ROS报错：-- Could NOT find PY_em (missing: PY_EM)
+
+这是因为catkin找的的python版本为anaconda下面的版本，所以需要改为指定采用下面的命令
+catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3

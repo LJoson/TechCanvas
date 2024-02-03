@@ -12,9 +12,10 @@ isShowComments: true
 
 
 [[toc]]
+
 # WIN10
 
-**背景：有时windows会莫名没有网，此时可能需要重置下网络**
+## **背景：有时windows会莫名没有网，此时可能需要重置下网络**
 
 操作：用**管理员身份**，打开cmd窗口，一般输入下面1、2条目，然后**重启系统**
 
@@ -62,11 +63,11 @@ https://blog.csdn.net/ml863606/article/details/86007579
 
 # Linux
 
-Git: gnutls_handshake() failed: Error in the pull function
+- Git: gnutls_handshake() failed: Error in the pull function
 ```
 apt-get -y install build-essential nghttp2 libnghttp2-dev libssl-dev
 ```
-linux 安装protobuf
+- linux 安装protobuf
 https://gist.github.com/diegopacheco/cd795d36e6ebcd2537cd18174865887b
 
 
@@ -80,7 +81,7 @@ https://gist.github.com/diegopacheco/cd795d36e6ebcd2537cd18174865887b
 
 打开终端，输入以下命令查看当前的网络接口：
 
-ifconfig
+```ifconfig```
 找到您的无线网卡接口名称，通常是“wlan0”或“wlp2s0”。
 
 扫描可用的WiFi网络。输入以下命令：
@@ -108,7 +109,7 @@ ifconfig wlan0
 inet addr:192.168.0.101  Bcast:192.168.0.255  Mask:255.255.255.0
 ```
 
-#切换自带驱动usb无线网卡工作模式
+## 切换自带驱动 usb 无线网卡工作模式
 无线网卡通常自带Windows驱动，存于其模拟CD-ROM中。Linux系统下，网卡首先被识别为大容量U盘（$ dmesg查看），要用usb_modeswitch 命令改变其工作模式，用法如下：
 ```
 sudo usb_modeswitch -KW -v 0bda -p 1a2b

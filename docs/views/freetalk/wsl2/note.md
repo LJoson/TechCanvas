@@ -42,3 +42,6 @@ del d:\wsl-ubuntu20.04.tar
 
 7.结束
 经过以上操作后，就将WSL的默认安装目录迁移到D:\wsl-ubuntu20.04目录下了。此目录即为WSL的跟文件系统。
+
+## faq
+

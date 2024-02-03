@@ -38,3 +38,13 @@ https://blog.csdn.net/qq_43872529/article/details/100937091
 
 - 找不到opencv_world3413.dll的解决办法
 https://www.cnblogs.com/MorStar/p/14824081.html
+
+- OpenCV-Python installation - CMake error missing vtkRenderingOpenGL
+
+```
+-D WITH_VTK=OFF -D BUILD_opencv_viz=OFF
+```
+
+- Undefined reference to `omp_get_max_threads_'
+-
+  The code needs to be compiled with -fopenmp

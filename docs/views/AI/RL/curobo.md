@@ -12,7 +12,7 @@ isShowComments: true
 
 # 引言
 
-https://curobo.org/source/getting_started/1_install_instructions.html
+[安装文档](https://curobo.org/source/getting_started/1_install_instructions.html)
 
 ## faq
 
