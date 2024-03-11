@@ -20,6 +20,7 @@ isShowComments: true
 ### error: too few arguments for template template parameter "Tuple" detected during instantiation of class "pybind11::detail::tuple_caster<Tuple, Ts...>
 
 找到....\pybind11\cast.h文件中的 // Base implementation for std::tuple and std::pair 的内容然后替换以下内容:
+
 ```
 // Base implementation for std::tuple and std::pair
 template <template <typename...> class Tuple, typename... Ts>

@@ -59,7 +59,8 @@
           const projects = filter(res, item => !item.private);
           this.projects = orderBy(
             projects,
-            ["stargazers_count", "forks_count", "name", "created_at"],
+            // ["stargazers_count", "forks_count", "name", "created_at"],
+            ["stargazers_count", "name", "created_at"],
             ["desc", "desc", "asc", "desc"]
           );
         });

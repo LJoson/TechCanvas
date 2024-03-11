@@ -107,8 +107,10 @@ pip show isaacgym
 pip uninstall isaacgym
 ```
 到此就可以开始愉快跟isaac gym玩耍了
+
 ## faq
-进入example目录下执行demo，有报错：
+
+- 进入example目录下执行demo，有报错：
 
 ImportError: libpython3.7m.so.1.0: cannot open shared ogject file:.....
 
@@ -118,3 +120,9 @@ ImportError: libpython3.7m.so.1.0: cannot open shared ogject file:.....
 sudo apt install libpython3.7
 ```
 在官方文档install.html中还有其它针对anaconda用户的错误解决，可自行查找。
+
+- No GPU devices found.
+[Error][carb.gym.plugin] Failed to create Nvf device in createNvfGraphics.
+Please make sure Vulkan is correctly install.
+
+解决：没有安装vulkan

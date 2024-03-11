@@ -24,6 +24,7 @@ git clone https://github.com/NVIDIA-AI-IOT/torch2trt
 cd torch2trt
 python setup.py install
 ```
+
 ## faq
 
 FileNotFoundError: [WinError 2] 系统找不到指定的文件

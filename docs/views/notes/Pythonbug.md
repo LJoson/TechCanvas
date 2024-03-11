@@ -180,3 +180,20 @@ sudo apt-get install python3-dev  # for python3.x
 ## python调用dll报错：OSError: [WinError 193] %1 不是有效的 Win32 应用程序
 
 注意python工具架构类型，dll是64位的，安装64位的python，dll是32位的，安装32位的python。
+
+## conda 加速
+
+添加清华源
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+```
+另外为了保险起见，建议同时添加第三方conda源：
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+```
