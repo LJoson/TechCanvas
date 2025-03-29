@@ -4,7 +4,7 @@ date: 2024-01-08 11:10:12
 sidebar: true
 sidebarDepth: 5
 tags:
-- 部署
+- 模型部署
 categories:
 - "AI及机器人等"
 isShowComments: true

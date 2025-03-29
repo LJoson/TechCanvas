@@ -3,7 +3,7 @@ title: 基于tengine+ohos的ndk开发-环境准备
 date: 2021-03-27 22:00:12
 sidebar: true
 sidebarDepth: 5
-tags: 
+tags:
 - 模型部署及加速
 categories:
 - "AI及机器人等"
@@ -59,14 +59,14 @@ Arm64 OHOS 编译（主要是Windows平台,DevEco Studio还没有Linux）
 ::下面部分脚本有点问题
 ::mkdir build-ohos-armeabi-v7a
 ::pushd build-ohos-armeabi-v7a
-::%CMAKE_EXE% ../.. -G Ninja -DCMAKE_TOOLCHAIN_FILE="%OHOS_NDK%/build/cmake/ohos.toolchain.cmake"  ::-DCMAKE_MAKE_PROGRAM=%NINJA_EXE%  -DOHOS_ARCH="armeabi-v7a" -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON 
+::%CMAKE_EXE% ../.. -G Ninja -DCMAKE_TOOLCHAIN_FILE="%OHOS_NDK%/build/cmake/ohos.toolchain.cmake"  ::-DCMAKE_MAKE_PROGRAM=%NINJA_EXE%  -DOHOS_ARCH="armeabi-v7a" -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON
 ::%CMAKE_EXE% --build . --parallel %NUMBER_OF_PROCESSORS%
 ::%CMAKE_EXE% --build . --target install
 ::popd
 
 mkdir build-ohos-arm64-v8a
 pushd build-ohos-arm64-v8a
-%CMAKE_EXE% ../.. -G Ninja -DCMAKE_TOOLCHAIN_FILE="%OHOS_NDK%/build/cmake/ohos.toolchain.cmake"  -DCMAKE_MAKE_PROGRAM=%NINJA_EXE%  -DOHOS_ARCH="arm64-v8a" -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON  
+%CMAKE_EXE% ../.. -G Ninja -DCMAKE_TOOLCHAIN_FILE="%OHOS_NDK%/build/cmake/ohos.toolchain.cmake"  -DCMAKE_MAKE_PROGRAM=%NINJA_EXE%  -DOHOS_ARCH="arm64-v8a" -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON
 %CMAKE_EXE% --build . --parallel %NUMBER_OF_PROCESSORS%
 %CMAKE_EXE% --build . --target install
 popd
@@ -78,6 +78,7 @@ popd
 ```
 
 运行即可。
+
 ps:可能需要安装ninja:
 
 下载[ninja](https://github.com/ninja-build/ninja/releases)中的exe(win平台)，解压在任意一个文件夹，并在系统环境变量中加入此路径路径，重启。运行

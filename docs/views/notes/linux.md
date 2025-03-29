@@ -11,10 +11,14 @@ isShowComments: true
 ---
 
 [[toc]]
+
 # 引言
+
 Linux系统使用的过程中常用命令实录，多为Ubuntu下的命令，注意文件夹与文件的区别，相对路径与绝对路径的区别。
 不断更新之中
+
 ## ubuntu 18.04
+
 - Linux 查看文件大小常用命令
 
 1. 使用stat命令查看
@@ -48,7 +52,9 @@ output MIME type strings (--mime-type and --mime-encoding) ：file -i <file name
 
 - 直接在shell里设定的命令别名，在终端关闭或者系统重新启动后都会失效，如何才能永久有效呢？
 使用编辑器打开~/.bashrc，在文件中加入别名设置，如：alias rm='rm -i'，保存后执行source ~/.bashrc，这样就可以永久保存命令的别名了。因为修改的是当前用户目录下的~/.bashrc文件，所以这样的方式只对当前用户有用。如果要对所有用户都有效，修改/etc/bashrc文件就可以了
+
 ## Linux 两种终端分屏工具
+
 一、使用screen分屏（只能上下分屏，不能左右分屏）
 
 （1）安装工具
@@ -101,6 +107,7 @@ Alt+o 逆时针旋转当前窗口的面板
 Ctrl+o 顺时针旋转当前窗口的面板
 
 ## Linux命令大全
+
 - nohup 命令
 nohup 英文全称 no hang up（不挂起），用于在系统后台不挂断地运行命令，退出终端不会影响程序的运行。
 
@@ -110,9 +117,11 @@ nohup 命令，在默认情况下（非重定向时），会输出一个名叫 n
 所有使用者
 
 语法格式:
+
 ```
 nohup Command [ Arg … ] [ & ]
 ```
+
 参数说明：
 Command：要执行的命令。
 
@@ -120,8 +129,8 @@ Arg：一些参数，可以指定输出文件。
 
 &：让命令在后台执行，终端退出后命令仍旧执行。
 
-
 - Linux下穿件带点文件夹和隐藏文件显示隐藏文件命令
+
 ```
 ls -a
 ```
@@ -134,20 +143,20 @@ ls -a
 
 - linux usb摄像头设备信息查看
 
-直接参考：https://blog.csdn.net/pyt1234567890/article/details/109558644
+直接参考：<https://blog.csdn.net/pyt1234567890/article/details/109558644>
 
 - linux下杀死进程（kill）的N种方法
 
-参考：https://blog.csdn.net/andy572633/article/details/7211546
+参考：<https://blog.csdn.net/andy572633/article/details/7211546>
 
 - Linux备份SD卡数据
 
-https://codeantenna.com/a/vIvRYQbDhC
+<https://codeantenna.com/a/vIvRYQbDhC>
 看进度
-https://blog.csdn.net/puppylpg/article/details/51290363
+<https://blog.csdn.net/puppylpg/article/details/51290363>
 
 - 在终端连接ssh的断开关闭退出的方法
-https://blog.csdn.net/zhichaosong/article/details/89193767
+<https://blog.csdn.net/zhichaosong/article/details/89193767>
 
 - Linux 清理make、configure生成的文件
 
@@ -159,32 +168,35 @@ make distclean #清除上一次make以及configure命令生成的文件
 
 - linux下杀死进程（kill）的N种方法
 
-https://blog.csdn.net/andy572633/article/details/7211546
-
+<https://blog.csdn.net/andy572633/article/details/7211546>
 
 - 永久修改与同步系统时间
 
 首先使用date命令修改系统时间，例如
+
 ```
 sudo date -s 2022-10-11
 sudo date -s 19:40:30
 ```
 
 然后使用
+
 ```
 sudo hwclock -w
 ```
+
 同步硬件时间实现更改Linux系统时间方法。
 
 另外，修改所有文件的时间戳，
+
 ```
 touch *
 ```
 
-
 ## ubuntu 20.04
 
 - 检查U盘是否有损坏
+
 ```
 sudo badblocks -sv /dev/sdb
 

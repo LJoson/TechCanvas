@@ -15,3 +15,9 @@ isShowComments: true
 ```
 sudo apt install gstreamer1.0-rtsp
 ```
+
+## WARNING: erroneous pipeline: no element “h264parse”
+
+```
+sudo apt install gstreamer1.0-plugins-bad
+```

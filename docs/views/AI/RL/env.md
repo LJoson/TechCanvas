@@ -125,4 +125,4 @@ sudo apt install libpython3.7
 [Error][carb.gym.plugin] Failed to create Nvf device in createNvfGraphics.
 Please make sure Vulkan is correctly install.
 
-解决：没有安装vulkan
+解决：没有安装vulkan,按照官方文档安装vulkan即可

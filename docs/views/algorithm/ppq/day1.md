@@ -11,3 +11,10 @@ isShowComments: true
 ---
 
 
+## faq
+
+- tensorboard使用出现 ImportError while running tensorboard command: cannot import name '_plain_int' from 'werkzeug._internal'
+
+```
+conda install -c conda-forge werkzeug
+```

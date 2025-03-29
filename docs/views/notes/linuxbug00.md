@@ -12,18 +12,16 @@ isShowComments: true
 
 **wget: server returned error: HTTP/1.1 416 Requested Range Not Satisfiable**
 
-
-
-https://blog.csdn.net/mociml/article/details/6254106
-
+<https://blog.csdn.net/mociml/article/details/6254106>
 
 - ifconfig command not found
 
-https://www.jianshu.com/p/75dbfb91f4fd
-https://www.cnblogs.com/xioawu-blog/p/10993633.html
+<https://www.jianshu.com/p/75dbfb91f4fd>
+<https://www.cnblogs.com/xioawu-blog/p/10993633.html>
 
 - 虚拟机上Ubuntu报错：检测到系统程序出现问题 system program problem detected
 解决办法：
+
 ```
 sudo vim /etc/default/apport
 ```
@@ -36,9 +34,10 @@ sudo vim /etc/default/apport
 
 - 在 VMware ubuntu 18.04虚拟机中使用主机clash for window代理上网
 
-https://zhuanlan.zhihu.com/p/377150903
+<https://zhuanlan.zhihu.com/p/377150903>
 
--  E: You don't have enough free space in /var/cache/apt/archives/.
+- E: You don't have enough free space in /var/cache/apt/archives/.
+
 ```
 cd /var/cache/apt/archives
 sudo apt-get clean
@@ -46,37 +45,51 @@ sudo apt-get clean
 ```
 
 - Linux——问题解决： fatal error: msgpack.hpp: No such file or directory #include ＜msgpack.hpp＞
+
 ```
 sudo apt install libmsgpack*
 ```
 
-
 - /usr/bin/ld: 找不到 -ludev
+
 ```
 sudo apt-get install libudev1 libudev-dev
 ```
+
 - 由于时钟同步问题，出现 warning:  Clock skewdetected.  Your build may be incomplete.这样的警告。下面是两种解决这个问题的办法:
 
 方法一：修改所有源代码的时间后重新编译
+
 ```
 find . -type f | xargs -n 5 touch
 make clean
 make
 ```
+
 方法二：修改编译环境的系统时间后重新编译
 例如
+
 ```
 sudo date -s 2022-10-11
 sudo date -s 19:40:30
 ```
 
 然后使用
+
 ```
 sudo hwclock -w
 ```
+
 同步硬件时间实现更改Linux系统时间方法。
 
 另外，修改所有文件的时间戳，
+
 ```
 touch *
+```
+
+- Could not run curl-config: [Errno 2] No such file or directory" when installing pycurl
+
+```
+sudo apt-get install libcurl4-openssl-dev libssl-dev
 ```

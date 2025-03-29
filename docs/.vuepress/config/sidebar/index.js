@@ -10,7 +10,8 @@ module.exports = {
                 'AI/2020baidustar.md', 'AI/TextClassification.md', 'AI/taac2021.md',
                 'AI/tengine/ohosndk0.md',
                 'AI/mmlab/mmpose/00.md',
-                'AI/yolov4.md', 'AI/photo.md', 'AI/guiYolov4.md',
+                'AI/yolo/yolov4.md', 'AI/yolo/yolov9_ncnn.md',
+                'AI/photo.md', 'AI/guiYolov4.md',
                 'AI/RL/curobo.md','AI/RL/env.md',
 
 
@@ -22,7 +23,7 @@ module.exports = {
             collapsable: true,
             children: [
                 'algorithm/opencv/clahe.md', 'algorithm/opencv/ImageProcessing.md', 'algorithm/opencv/otsu.md', 'algorithm/opencv/retinex.md',
-                'algorithm/opencv/env.md',
+                'algorithm/opencv/env.md','algorithm/opencv/cornerdetection00.md',
                 'algorithm/slam/n0.md','algorithm/slam/vslam_rs.md','algorithm/slam/velyodyne.md','algorithm/slam/aloam.md',
                 'algorithm/leetcode/leetcode1.md',
 

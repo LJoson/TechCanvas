@@ -1,9 +1,9 @@
 ---
-title: Cubli-自平衡方块
+title: cubli-自平衡方块
 date: 2020-07-4 12:41:12
 sidebar: true
 sidebarDepth: 5
-tags: 
+tags:
 - 机器人
 categories:
 - "电子设计等"

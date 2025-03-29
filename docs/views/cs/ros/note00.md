@@ -6,27 +6,34 @@ sidebarDepth: 5
 tags:
 - ROS
 categories:
-- "AI及机器人等"
+- "计算机技术等"
 isShowComments: true
 ---
 
 [[toc]]
 
-
 # Gazebo [Err] [REST.cc:205] Error in REST request 问题的解决
+
 修改文件：
+
 ```
 sudo gedit ~/.ignition/fuel/config.yaml
 ```
+
 将以下内容在行头添加#注释：
+
 ```
 url : https://api.ignitionfuel.org
 ```
+
 修改成：
+
 ```
 url: https://api.ignitionrobotics.org
 ```
+
 # 雷达环境
+
 ```
 sudo apt-get install ros-melodic-base-local-planner
 sudo apt-get install ros-melodic-costmap-converter
@@ -35,11 +42,13 @@ sudo apt-get install ros-melodic-mbf-msgs
 sudo apt-get install libsuitesparse-dev
 sudo apt-get install ros-melodic-libg2o
 ```
+
 # python中使用ROS的注意点
 
 之前在ROS安装和编译等常见问题.md提到了python3.8和python2.7冲突的问题，那次是不同文件可以分别用不同版本的python运行，但是如果同一个文件里用到了python的两个版本，那就不好解决了。
 
 比如一个文件需要用到python3的函数，然后发现import tf报错，没法用tf了，因为tf2_ros是针对python2编译的，为了适应python3 (melodic)，进行如下步骤：
+
 ```
 sudo apt update
 sudo apt install python3-catkin-pkg-modules python3-rospkg-modules python3-empy
@@ -68,5 +77,10 @@ python支持中文注释
 
 - ROS报错：-- Could NOT find PY_em (missing: PY_EM)
 
-这是因为catkin找的的python版本为anaconda下面的版本，所以需要改为指定采用下面的命令
+这是因为catkin make时，查找的 python版本为anaconda下面的版本，所以需要改为指定采用下面的命令
 catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
+
+
+- 运行roscore出现ImportError: No module named defusedxml.xmlrpc 解决方案
+原因：根据提示是找不到defusedxml模块，原因是未安装defusedxml模块;
+解决方案：在ROS窗口输入：pip install defusedxml;

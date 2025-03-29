@@ -168,7 +168,8 @@ ValueError: not enough values to unpack expected 3, got 2
 https://blog.csdn.net/pearl8899/article/details/109553774
 
 ## 执行setup.py时出现no commands supplied 错误
-python setup.py 改为 python setup.py  install 即可
+
+python setup.py 改为 python setup.py install 即可
 
 - 解决Python.h: No such file or directory
 
