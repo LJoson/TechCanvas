@@ -13,6 +13,7 @@ module.exports = {
                 'AI/yolo/yolov4.md', 'AI/yolo/yolov9_ncnn.md',
                 'AI/photo.md', 'AI/guiYolov4.md',
                 'AI/RL/curobo.md','AI/RL/env.md',
+                'AI/ebot/ebot0.md','AI/ebot/ebot1.md'
 
 
 
