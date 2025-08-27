@@ -1,155 +1,41 @@
----
-home: true
-heroImage: '/vuepress/topic.jpg'
-heroImageStyle: {
-  maxWidth: '800px',
-  width: '100%',
-  height: '15%',,
-  display: block,
-  margin: '24% auto -18% auto',
-  //border: '1px dashed #000',
-  box-shadow: '8px 8px 20px #022',
-  borderRadius: '1rem',
-  background: 'rgba(0, 0, 0, 0.8) none repeat scroll !important',
-}
-isShowTitleInHome: true
-#isShowComments: true
-actionText: 开启探索之旅→
-actionLink: /views/
-features:
-- title: 特点
-  details: 简洁易懂，以技术分享为中心（狗头保命）。
-- title: 简介
-  details: 一个纪录学习以及diy日记的随时会崩的个人blog。
-- title: 不定期更新
-  details: 本人有点懒且佛系，并没有确定的分享时间。
-footer: MIT Licensed | Copyright © 2020-present Lj
----
+# LJoson 的"废柴"小窝 - 项目文档
 
-# Hello World!
+## 📚 文档目录
 
-::: tip 寄语
+### 🛠️ 技术文档
+- [架构设计](./architecture/README.md) - 项目架构设计文档
+- [开发规范](./development/README.md) - 开发规范和最佳实践
+- [组件库](./components/README.md) - 组件使用文档
+- [API文档](./api/README.md) - API接口文档
 
-欢迎来到Glimmer小作坊，愿在此相遇的我们初心未变，追梦脚步不止~
+### 📖 业务手册
+- [问题解决手册](./business/problem-solving.md) - 常见问题解决方案
+- [最佳实践](./business/best-practices.md) - 业务最佳实践
+- [项目管理](./business/project-management.md) - 项目管理经验
 
-:::
+### 🎯 面试题库
+- [技术面试](./interview/technical.md) - 技术面试题库
+- [架构面试](./interview/architecture.md) - 架构设计面试题
+- [问题解决](./interview/problem-solving.md) - 问题解决能力面试题
 
-<CanvasNest color='0,23,255' zIndex='-2'></CanvasNest>
+### 📋 知识库
+- [常见问题](./knowledge/faq.md) - 常见问题解答
+- [错误修复](./knowledge/bug-fixes.md) - 错误修复记录
+- [经验总结](./knowledge/lessons-learned.md) - 经验教训总结
 
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=w80iB4VMWGpCdzsLwYIWpOrFn2h5MkhwRMsIYA6u2Jc"></script>
-<script>
+## 🚀 快速开始
 
-</script>
+1. **开发环境搭建**：参考 [开发规范](./development/README.md)
+2. **项目架构**：了解 [架构设计](./architecture/README.md)
+3. **组件使用**：查看 [组件库](./components/README.md)
 
-<style lang="stylus">
-.home .content__default:not(.custom) {
-  max-width: 100% !important;
-  margin: 0  !important;
-  padding: 0 !important;
-}
-.home .hero h1 {
-    display: none;
-}
-.home img {
-   transform: scale(0.8,0.8) !important;
-   transition: all 1s!important;
-}
-.home img:hover {
-   //transform: scale(1)!important;
-   transition:all 2s !important;
-}
-.home .features {
-    text-align: center;
-}
-.home .feature p {
-    color: #476582 !important;
-}
-.home .hero .description {
-    color: #476582 !important;
-}
-.wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 200px;
-    min-height: 10vh;
-    position: fixed;
-    top: -120%;
-    left: -1%;
-}
+## 📝 文档更新规则
 
-@media screen and (max-width: 780px) and (min-width: 541px){
-  .wrap {
-    background: none;
-  }
-  .clock {
-    max-width: 230px !important;
-    max-height: 230px !important;
-    margin-top: 33% !important;
-  }
-  .home img {
-    max-width: 520px !important;
-  }
-}
+- 每次修复问题后必须更新相关文档
+- 新增功能时必须补充文档说明
+- 定期检查和更新文档的准确性
+- 建立文档版本控制机制
 
-@media screen and (max-width: 540px) and (min-width: 481px){
-  .wrap {
-    background: none;
-  }
-  .clock {
-    max-width: 200px !important;
-    max-height: 200px !important;
-    margin-top: -10% !important;
-  }
-  .home img {
-    margin: 24% auto -6% auto !important;
-    max-width: 380px !important;
-  }
-}
+## 🤝 贡献指南
 
-@media screen and (max-width: 480px) and (min-width: 0px){
-  .wrap {
-    top:-107%;
-    transform: scale(0.68,0.58);
-    background: none;
-  }
-  .home img {
-    margin: 24% auto -6% auto !important;
-  }
-  .home .feature {
-    width: 100%;
-    text-align: center;
-    color: rgb(71, 101, 130) !important;
-    padding: 5px !important;
-    margin: -12px;
-    margin-left: 0px;
-  }
-  .clock {
-    background: rgba(0, 0, 0, 0) none repeat scroll !important;
-    background-image: url() !important;
-  }
-}
-.clock {
-  width: 300px !important;
-  height: 300px !important;
-  margin-top: 12%;
-  transition: all 2s;
-}
-.clock:hover {
-  transform: scale(0.55) !important;
-  transition: all 2s;
-}
-
-/*
-.wrap {
-  transition: all 2s;
-}
-.wrap:hover {
-  transform: scale(1.05) !important;
-  transition: all 2s;
-}
-*/
-
-</style>
-
+欢迎提交文档改进建议和补充内容！

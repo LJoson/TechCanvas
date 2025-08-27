@@ -1,0 +1,14 @@
+# 博客文章重定向
+/blog/* /blog/:splat 200
+
+# 项目页面重定向
+/projects/* /projects/:splat 200
+
+# 关于页面重定向
+/about /about/ 301
+
+# GlimmerLab页面重定向
+/glimmerlab /glimmerlab/ 301
+
+# 404页面
+/* /404.html 404
