@@ -439,5 +439,6 @@ scripts/upgrade*.bat
 
 # ===== 内容目录忽略 =====
 
-# 博客内容目录（不上传到Git）
-content/blog/
+# 博客内容目录（不上传到Git，但保留目录结构）
+content/blog/*
+!content/blog/.gitkeep
