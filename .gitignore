@@ -436,3 +436,8 @@ scripts/upgrade*.bat
 *.tar.gz
 *.zip
 *.rar
+
+# ===== 内容目录忽略 =====
+
+# 博客内容目录（不上传到Git）
+content/blog/
