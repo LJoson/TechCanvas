@@ -12,8 +12,8 @@ const projects = [
     category: 'Web开发',
     tags: ['Next.js', 'TypeScript', 'Three.js', 'WebGPU'],
     image: '/images/projects/personal-site.jpg',
-    liveUrl: 'https://ljoson.com',
-            githubUrl: 'https://github.com/LJoson/personal-site',
+    liveUrl: 'https://ljoson.github.io/',
+    githubUrl: 'https://github.com/LJoson/TechCanvas',
     featured: true,
     icon: Globe
   },
